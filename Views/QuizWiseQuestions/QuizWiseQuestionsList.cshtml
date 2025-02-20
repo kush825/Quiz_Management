@@ -1,0 +1,156 @@
+﻿<main id="main" class="main">
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body shadow-lg">
+                        <h5 class="card-title">Search QuizWize Questions</h5>
+                        <nav class="navbar p-3 rounded">
+                            <form class="d-flex align-items-center w-100">
+                                <!-- Input Fields -->
+                                <input class="form-control me-2" type="text" placeholder="QuizWize Questions" aria-label="QuizWize Question">
+                                <input class="form-control me-2" type="text" placeholder="User Id" aria-label="User Id">
+                                <input class="form-control me-2" type="date" aria-label="Date Search">
+                                <!-- Buttons -->
+                                <button type="submit" class="btn btn-primary w-25">Search</button>
+                            </form>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pagetitle">
+            <h1>QuizWizeQuestion List</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="QuizWiseQuestions" asp-action="AddQuizWiseQuestions">QuizWizeQuestion</a></li>
+                    <li class="breadcrumb-item active"><a asp-controller="QuizWiseQuestions" asp-action="QuizWiseQuestionsList">QuizWizeQuestion List</a></li>
+                </ol>
+                <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            </nav>
+        </div><!-- End Page Title -->
+
+
+        <div class="max-w-7xl mx-auto bg-white shadow-lg rounded-xl p-6">
+            <div class="d-flex justify-content-center mb-4">
+                <h1 class="text-2xl font-bold ">QuizWizeQuestion List</h1>
+                <a type="Add" class="btn btn-primary ms-auto p-2" asp-controller="QuizWiseQuestions" asp-action="AddQuizWiseQuestions">Add</a>
+            </div>
+
+
+            <!-- Search and Pagination Controls -->
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <label for="entries" class="text-sm font-medium text-gray-700 mr-2">Show</label>
+                    <select id="entries" class="border-gray-300 rounded-md shadow-sm">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span class="ml-2 text-sm text-gray-600">entries per page</span>
+                </div>
+
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+            </div>
+
+
+            <!-- Table with stripped rows -->
+            <table class="min-w-full table-auto bg-white rounded-xl shadow">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">QuizWiseQuestions ID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Quiz ID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">QuestionID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">User ID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Created</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Modified</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-2 ">1</td>
+                        <td class="px-4 py-2 ">101</td>
+                        <td class="px-4 py-2 ">5001</td>
+                        <td class="px-4 py-2 ">1001</td>
+                        <td class="px-4 py-2 ">2024-01-10 10:30</td>
+                        <td class="px-4 py-2 ">2024-01-12 15:45</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2 ">2</td>
+                        <td class="px-4 py-2 ">101</td>
+                        <td class="px-4 py-2 ">5002</td>
+                        <td class="px-4 py-2 ">1002</td>
+                        <td class="px-4 py-2 ">2024-01-10 11:00</td>
+                        <td class="px-4 py-2 ">2024-01-12 16:00</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2 ">3</td>
+                        <td class="px-4 py-2 ">102</td>
+                        <td class="px-4 py-2 ">5003</td>
+                        <td class="px-4 py-2 ">1003</td>
+                        <td class="px-4 py-2 ">2024-01-11 12:15</td>
+                        <td class="px-4 py-2 ">2024-01-13 14:20</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2 ">4</td>
+                        <td class="px-4 py-2 ">102</td>
+                        <td class="px-4 py-2 ">5004</td>
+                        <td class="px-4 py-2 ">1004</td>
+                        <td class="px-4 py-2 ">2024-01-11 13:50</td>
+                        <td class="px-4 py-2 ">2024-01-14 17:30</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">5</td>
+                        <td class="px-4 py-2">103</td>
+                        <td class="px-4 py-2">5005</td>
+                        <td class="px-4 py-2">1005</td>
+                        <td class="px-4 py-2">2024-01-12 14:25</td>
+                        <td class="px-4 py-2">2024-01-15 18:10</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+            <div class="mt-4 flex justify-between items-center">
+                <span class="text-sm text-gray-600">Showing 1 to 3 of 3 entries</span>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded-md">Previous</button>
+                    <button class="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded-md">Next</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->

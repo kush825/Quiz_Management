@@ -1,0 +1,26 @@
+﻿@model DataTable
+@using System.Data
+
+<table class="table">
+    <thead>
+        <tr>
+            <th >CityID</th>
+            <th>CityName</th>
+            <th>CityCode</th>
+            <th>StateName</th>
+            <th>UserName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dataRow in Model.Rows)
+        {
+            <tr>
+                <td>@dataRow["CityID"]</td>
+                <td>@dataRow["CityName"]</td>
+                <td>@dataRow["STDCode"]</td>
+                <td>@dataRow["StateName"]</td>
+                <td>@dataRow["userid"]</td>
+            </tr>
+        }
+    </tbody>
+</table>

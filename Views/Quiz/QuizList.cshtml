@@ -1,0 +1,133 @@
+﻿<main id="main" class="main">
+    <section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body shadow-lg">
+                        <h5 class="card-title">Search Quiz</h5>
+                    <nav class="navbar p-3 rounded">
+                        <form class="d-flex align-items-center w-100">
+                            <!-- Input Fields -->
+                            <input class="form-control me-2" type="text" placeholder="Quiz History" aria-label="Quiz History">
+                            <input class="form-control me-2" type="text" placeholder="User Id" aria-label="User Id">
+                            <input class="form-control me-2" type="date" aria-label="Date Search">
+                            <!-- Buttons -->
+                            <button type="submit" class="btn btn-primary w-25">Search</button>
+                        </form>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <div class="pagetitle">
+            <h1>User List</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="Quiz" asp-action="AddQuiz">Quiz</a></li>
+                    <li class="breadcrumb-item active"><a asp-controller="Quiz" asp-action="QuizList">Quiz List</a></li>
+                </ol>
+                <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            </nav>
+        </div><!-- End Page Title -->
+
+
+        <div class="max-w-7xl mx-auto bg-white shadow-lg rounded-xl p-6">
+            <div class="d-flex justify-content-center mb-4">
+                <h1 class="text-2xl font-bold ">Quiz List</h1>
+                <a type="Add" class="btn btn-primary ms-auto p-2" asp-controller="Quiz" asp-action="AddQuiz">Add</a>
+            </div>
+
+
+
+            <!-- Search and Pagination Controls -->
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <label for="entries" class="text-sm font-medium text-gray-700 mr-2">Show</label>
+                    <select id="entries" class="border-gray-300 rounded-md shadow-sm">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span class="ml-2 text-sm text-gray-600">entries per page</span>
+                </div>
+
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+            </div>
+
+
+            <!-- Table with stripped rows -->
+            <table class="min-w-full table-auto bg-white rounded-xl shadow">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Quiz ID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Quiz Name.</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Total Questions</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Quiz Date</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">User ID</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Created</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Modified</th>
+                        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-2">1234</td>
+                        <td class="px-4 py-2">science</td>
+                        <td class="px-4 py-2">20</td>
+                        <td class="px-4 py-2">2022/01/15</td>
+                        <td class="px-4 py-2">101</td>
+                        <td class="px-4 py-2">2025/09/19</td>
+                        <td class="px-4 py-2">202/12/24</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">5678</td>
+                        <td class="px-4 py-2">social science</td>
+                        <td class="px-4 py-2">30</td>
+                        <td class="px-4 py-2">2021/11/23</td>
+                        <td class="px-4 py-2">102</td>
+                        <td class="px-4 py-2">2023/10/27</td>
+                        <td class="px-4 py-2">2023/11/11</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">9876</td>
+                        <td class="px-4 py-2">Maths</td>
+                        <td class="px-4 py-2">50</td>
+                        <td class="px-4 py-2">2023/06/05</td>
+                        <td class="px-4 py-2">103</td>
+                        <td class="px-4 py-2">2025/01/01</td>
+                        <td class="px-4 py-2">2025/02/08</td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+            <div class="mt-4 flex justify-between items-center">
+                <span class="text-sm text-gray-600">Showing 1 to 3 of 3 entries</span>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded-md">Previous</button>
+                    <button class="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded-md">Next</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</main><!-- End #main -->

@@ -1,0 +1,75 @@
+﻿<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Add QuizWiseQuestion</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a asp-controller="QuizWiseQuestions" asp-action="AddQuizWiseQuestions">QuizWiseQuestion</a></li>
+                <li class="breadcrumb-item active"><a asp-controller="QuizWiseQuestions" asp-action="QuizWiseQuestionsList">QuizWiseQuestion List</a></li>
+            </ol>
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-body shadow-lg">
+                        <h5 class="card-title">QuizWiseQuestion form</h5>
+
+                        <div class="card">
+							<div class="card-body shadow-lg">
+                                <h5 class="card-title">create QuizWiseQuestion</h5>
+
+                                <!-- No Labels Form -->
+
+                                <h2 class="text-2xl font-bold text-gray-700 mb-6">Add User</h2>
+                                <form class="space-y-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">QuizWiseQuestion ID</label>
+                                            <input type="text" id="name" name="name" placeholder="Enter QuizWiseQuestion ID" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">Question ID</label>
+                                            <input type="text" id="name" name="name" placeholder="Enter Question Name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">User ID</label>
+                                            <input type="text" id="name" name="name" placeholder="Enter User ID" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">Quiz ID</label>
+                                            <input type="text" id="name" name="name" placeholder="Enter Quiz Name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <!-- Name and Password Fields -->
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">Created</label>
+                                            <input type="date" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+                                        <div>
+                                            <label for="name" class="block text-sm font-medium text-gray-700">Modified</label>
+                                            <input type="date" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Submit and Reset Buttons -->
+                                    <div class="flex space-x-4">
+                                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                                        <button type="reset" class="px-6 py-3 bg-gray-400 text-white font-semibold rounded-xl shadow-sm hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300">Reset</button>
+                                    </div>
+                                </form><!-- End No Labels Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+</main><!-- End #main -->
